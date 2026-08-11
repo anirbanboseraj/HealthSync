@@ -1,0 +1,302 @@
+/* =========================================
+   HEALTHSYNC NAVBAR
+========================================= */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(15, 23, 42, 0.88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+
+    z-index: 1000;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo a {
+    display: flex;
+
+    align-items: center;
+    gap: 9px;
+
+    color: #ffffff;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    letter-spacing: -0.5px;
+
+    transition: 0.3s ease;
+}
+
+.logo a:hover {
+    transform: translateY(-1px);
+}
+
+.logo i {
+    color: #38bdf8;
+
+    font-size: 29px;
+
+    margin: 0;
+}
+
+.logo-accent {
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    position: relative;
+
+    display: inline-block;
+
+    color: #e5e7eb;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    padding: 8px 2px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Hover */
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+
+/* Underline */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #38bdf8;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Active page */
+
+.nav-links a.active {
+    color: #38bdf8;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   NAV BUTTONS
+========================================= */
+
+.nav-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.login-btn,
+.register-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Login */
+
+.login-btn {
+    color: #ffffff;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+}
+
+.login-btn:hover {
+    color: #38bdf8;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+
+/* Register */
+
+.register-btn {
+    color: #ffffff;
+
+    background: #2563eb;
+
+    padding: 11px 21px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+}
+
+.register-btn:hover {
+    color: #ffffff;
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 9px 22px rgba(37, 99, 235, 0.35);
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    padding: 8px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 70px;
+
+        padding: 0 5%;
+    }
+
+
+    .logo a {
+        font-size: 23px;
+    }
+
+    .logo i {
+        font-size: 25px;
+    }
+
+
+    .nav-links,
+    .nav-buttons {
+        display: none;
+    }
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+}

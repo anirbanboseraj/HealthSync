@@ -1,0 +1,266 @@
+/* =========================================
+   HEALTHSYNC STATISTICS
+========================================= */
+
+.statistics {
+    position: relative;
+
+    padding: 70px 7%;
+
+    background: #0f172a;
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* Subtle background */
+
+.statistics::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    top: -250px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, 0.08);
+
+    filter: blur(40px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.statistics-container {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   STAT CARD
+========================================= */
+
+.stat-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    padding: 25px 22px;
+
+    min-height: 125px;
+
+    background: rgba(30, 41, 59, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+
+    overflow: hidden;
+}
+
+
+/* Top highlight */
+
+.stat-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #38bdf8,
+        transparent
+    );
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* Hover */
+
+.stat-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(30, 41, 59, 0.95);
+
+    border-color: rgba(56, 189, 248, 0.25);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.stat-icon {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 12px;
+
+    background: rgba(56, 189, 248, 0.10);
+
+    border: 1px solid rgba(56, 189, 248, 0.12);
+
+    color: #38bdf8;
+
+    font-size: 21px;
+
+    transition: 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: #ffffff;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.stat-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.stat-content h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 29px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+.stat-content p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .statistics {
+        padding: 60px 5%;
+    }
+
+    .statistics-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .statistics {
+        padding: 45px 5%;
+    }
+
+    .statistics-container {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .stat-card {
+        min-height: 100px;
+
+        padding: 20px;
+    }
+
+    .stat-icon {
+        width: 46px;
+        height: 46px;
+
+        font-size: 18px;
+    }
+
+    .stat-content h2 {
+        font-size: 25px;
+    }
+
+}

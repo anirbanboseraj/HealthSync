@@ -1,0 +1,310 @@
+/*==========================
+    Global CSS
+==========================*/
+
+
+@import url("register.css");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#07111f,#0B1120,#111827);
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+
+
+/*=========================
+      Background Glow
+=========================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:500px;
+
+    height:500px;
+
+    background:#2563eb;
+
+    border-radius:50%;
+
+    filter:blur(180px);
+
+    top:-150px;
+
+    left:-150px;
+
+    opacity:.18;
+
+    z-index:-1;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:400px;
+
+    height:400px;
+
+    background:#06b6d4;
+
+    border-radius:50%;
+
+    filter:blur(180px);
+
+    bottom:-150px;
+
+    right:-150px;
+
+    opacity:.15;
+
+    z-index:-1;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+section{
+
+    padding:140px 8%;
+
+}
+
+
+
+.container{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+
+
+/*====================================
+        DOCTOR LOGIN
+====================================*/
+
+/*====================================
+        DOCTOR LOGIN
+====================================*/
+
+.login-page{
+
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    background:transparent;
+
+}
+
+.login-left{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+    color:#fff;
+
+}
+
+.login-left img{
+
+    width:350px;
+    margin-bottom:20px;
+
+}
+
+.login-left h1{
+
+    font-size:52px;
+    margin-bottom:10px;
+
+}
+
+.login-left span{
+
+    color:#2563eb;
+
+}
+
+.login-left p{
+
+    color:#cbd5e1;
+    font-size:20px;
+
+}
+
+.login-right{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.login-form{
+
+    width:100%;
+    max-width:430px;
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.login-form h2{
+
+    text-align:center;
+    color:#fff;
+    margin-bottom:30px;
+    font-size:32px;
+
+}
+
+.login-form label{
+
+    display:block;
+    margin-bottom:8px;
+    color:#fff;
+    font-weight:600;
+
+}
+
+.login-form input{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#0f172a;
+    color:white;
+    font-size:16px;
+    margin-bottom:20px;
+
+}
+
+.login-form input:focus{
+
+    outline:2px solid #2563eb;
+
+}
+
+.login-form .register-btn{
+
+    width:100%;
+    padding:15px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.login-form .register-btn:hover{
+
+    background:#1d4ed8;
+    transform:translateY(-2px);
+
+}
+
+.login-form a{
+
+    color:#60a5fa;
+    text-decoration:none;
+
+}
+
+.login-form a:hover{
+
+    text-decoration:underline;
+
+}
+
+.error{
+
+    background:#dc2626;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:20px;
+    text-align:center;
+
+}
+
+@media(max-width:900px){
+
+.login-page{
+
+grid-template-columns:1fr;
+
+}
+
+.login-left{
+
+display:none;
+
+}
+
+.login-right{
+
+padding:30px;
+
+}
+
+}

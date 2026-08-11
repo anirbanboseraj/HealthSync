@@ -1,0 +1,113 @@
+/*=========================
+      Responsive Design
+=========================*/
+
+@media(max-width:992px){
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-features{
+
+    align-items:center;
+
+}
+
+.nav-links{
+
+    display:none;
+
+}
+
+.hero-image img{
+
+    width:400px;
+
+}
+
+.services-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.doctor-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-text h1{
+
+    font-size:48px;
+
+}
+
+.hero-image img{
+
+    width:320px;
+
+}
+
+.services-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.doctor-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.stats{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero{
+
+    padding-top:120px;
+
+}
+
+.hero-text h1{
+
+    font-size:38px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.stats{
+
+    grid-template-columns:1fr;
+
+}
+
+}

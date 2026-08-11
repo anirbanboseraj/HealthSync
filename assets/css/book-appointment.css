@@ -1,0 +1,627 @@
+/* =========================================================
+   HEALTHSYNC - BOOK APPOINTMENT
+========================================================= */
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.appointment-header {
+    margin-bottom: 30px;
+}
+
+.page-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #60a5fa;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+.appointment-header h1 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.appointment-header p {
+    margin-top: 8px;
+
+    color: #94a3b8;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.appointment-container {
+    display: grid;
+
+    grid-template-columns: 360px minmax(500px, 1fr);
+
+    gap: 28px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   SELECTED DOCTOR CARD
+========================= */
+
+.selected-doctor {
+    background: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 18px;
+
+    padding: 26px;
+
+    height: fit-content;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* CARD TITLE */
+
+.doctor-card-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #f8fafc;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #334155;
+}
+
+.doctor-card-title i {
+    color: #60a5fa;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   DOCTOR PROFILE
+========================= */
+
+.doctor-profile {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px 0;
+}
+
+
+/* DOCTOR PHOTO */
+
+.doctor-photo {
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 4px solid #3b82f6;
+
+    background: #0f172a;
+
+    margin-bottom: 18px;
+}
+
+.doctor-photo img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* DOCTOR NAME */
+
+.doctor-details h2 {
+    color: #f8fafc;
+
+    font-size: 23px;
+
+    margin: 0 0 8px;
+}
+
+
+/* SPECIALIZATION */
+
+.specialization {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #60a5fa;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+
+/* DETAILS */
+
+.doctor-detail {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    margin: 8px 0;
+}
+
+.doctor-detail i {
+    color: #60a5fa;
+
+    width: 18px;
+}
+
+
+/* =========================
+   ABOUT DOCTOR
+========================= */
+
+.doctor-about {
+    border-top: 1px solid #334155;
+
+    padding-top: 20px;
+
+    margin-top: 5px;
+}
+
+.doctor-about h3 {
+    color: #f8fafc;
+
+    font-size: 15px;
+
+    margin: 0 0 8px;
+}
+
+.doctor-about p {
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =========================
+   BOOKING FORM CARD
+========================= */
+
+.booking-form-card {
+    background: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   FORM TITLE
+========================= */
+
+.form-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid #334155;
+
+    margin-bottom: 25px;
+}
+
+.form-icon {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(59, 130, 246, 0.15);
+
+    color: #60a5fa;
+
+    font-size: 20px;
+}
+
+.form-title h2 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: 21px;
+}
+
+.form-title p {
+    margin: 5px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FORM SECTION
+========================= */
+
+.form-section {
+    margin-bottom: 28px;
+}
+
+.form-section h3 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #e2e8f0;
+
+    font-size: 15px;
+
+    margin-bottom: 18px;
+}
+
+.form-section h3 i {
+    color: #60a5fa;
+}
+
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.form-group label span {
+    color: #ef4444;
+}
+
+
+/* =========================
+   INPUT WRAPPER
+========================= */
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper i {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #64748b;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #334155;
+
+    border-radius: 10px;
+
+    background: #0f172a;
+
+    color: #f8fafc;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+
+    box-sizing: border-box;
+}
+
+.form-group input {
+    height: 48px;
+
+    padding: 0 15px 0 43px;
+}
+
+.form-group textarea {
+    padding: 14px;
+
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3b82f6;
+
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+
+/* READONLY */
+
+.form-group input[readonly] {
+    color: #94a3b8;
+
+    cursor: not-allowed;
+}
+
+
+/* DATE/TIME ICON FIX */
+
+input[type="date"],
+input[type="time"] {
+    color-scheme: dark;
+}
+
+
+/* =========================
+   SMALL TEXT
+========================= */
+
+.form-group small {
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #334155;
+
+    margin-top: 10px;
+}
+
+
+/* BACK BUTTON */
+
+.cancel-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #475569;
+
+    background: transparent;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.cancel-btn:hover {
+    background: #334155;
+
+    color: #fff;
+}
+
+
+/* CONFIRM */
+
+.confirm-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 46px;
+
+    padding: 0 24px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.confirm-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .appointment-container {
+        grid-template-columns: 1fr;
+    }
+
+    .selected-doctor {
+        max-width: none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .appointment-header h1 {
+        font-size: 28px;
+    }
+
+    .booking-form-card,
+    .selected-doctor {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .cancel-btn,
+    .confirm-btn {
+        width: 100%;
+    }
+
+}

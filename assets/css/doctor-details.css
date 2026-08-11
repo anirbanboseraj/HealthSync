@@ -1,0 +1,504 @@
+/* =========================================================
+   HEALTHSYNC - DOCTOR PROFILE PAGE
+========================================================= */
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    padding: 35px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    color: #b8c4d9;
+
+    background: #182238;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+.back-button:hover {
+    color: white;
+
+    background: #24304a;
+}
+
+
+/* =========================================================
+   MAIN PROFILE CARD
+========================================================= */
+
+.doctor-profile-card {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background: #1c2639;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   PROFILE TOP
+========================================================= */
+
+.profile-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding-bottom: 30px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.profile-image-wrapper {
+    width: 160px;
+
+    height: 160px;
+
+    min-width: 160px;
+
+    flex-shrink: 0;
+}
+
+
+/* IMPORTANT:
+   This prevents the uploaded image
+   from becoming huge.
+*/
+
+.profile-image {
+    width: 160px;
+
+    height: 160px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #2f6df6;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   IMAGE PLACEHOLDER
+========================================================= */
+
+.profile-placeholder {
+    width: 160px;
+
+    height: 160px;
+
+    border-radius: 50%;
+
+    border: 5px solid #2f6df6;
+
+    background: #111a2d;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.profile-placeholder i {
+    font-size: 65px;
+
+    color: #5da3ff;
+}
+
+
+/* =========================================================
+   PROFILE HEADING
+========================================================= */
+
+.profile-heading {
+    flex: 1;
+}
+
+
+.profile-heading h1 {
+    margin: 0 0 8px;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    color: #f5f7fb;
+}
+
+
+.profile-heading h2 {
+    margin: 0 0 15px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #5da3ff;
+}
+
+
+.profile-heading h2 i {
+    margin-right: 7px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.doctor-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(40, 200, 120, 0.12);
+
+    color: #5ee6a1;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.doctor-status i {
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   INFORMATION GRID
+========================================================= */
+
+.profile-information {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   INFORMATION BOX
+========================================================= */
+
+.information-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    min-height: 80px;
+
+    background: #172136;
+
+    border-radius: 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================================
+   INFORMATION ICON
+========================================================= */
+
+.information-icon {
+    width: 45px;
+
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(47, 109, 246, 0.15);
+
+    color: #5da3ff;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   INFORMATION TEXT
+========================================================= */
+
+.information-box span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #8f9db5;
+
+    font-size: 13px;
+}
+
+
+.information-box strong {
+    display: block;
+
+    color: #edf2fa;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section {
+    margin-top: 28px;
+
+    padding: 24px;
+
+    background: #172136;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+.about-section h2 {
+    margin: 0 0 12px;
+
+    font-size: 19px;
+
+    color: #f5f7fb;
+}
+
+
+.about-section h2 i {
+    margin-right: 8px;
+
+    color: #5da3ff;
+}
+
+
+.about-section p {
+    margin: 0;
+
+    color: #b6c0d1;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.profile-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+.profile-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+/* Primary */
+
+.profile-button.primary {
+    background: #2f6df6;
+
+    color: white;
+}
+
+
+.profile-button.primary:hover {
+    background: #1f5de0;
+
+    transform: translateY(-2px);
+}
+
+
+/* Secondary */
+
+.profile-button.secondary {
+    background: transparent;
+
+    color: #5da3ff;
+
+    border: 1px solid #2f6df6;
+}
+
+
+.profile-button.secondary:hover {
+    background: #2f6df6;
+
+    color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .main-content {
+        padding: 20px;
+    }
+
+
+    .doctor-profile-card {
+        padding: 25px;
+    }
+
+
+    .profile-top {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .profile-heading h1 {
+        font-size: 27px;
+    }
+
+
+    .profile-information {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profile-actions {
+        flex-direction: column;
+    }
+
+
+    .profile-button {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .doctor-profile-card {
+        padding: 18px;
+    }
+
+
+    .profile-image-wrapper,
+    .profile-image,
+    .profile-placeholder {
+        width: 130px;
+
+        height: 130px;
+
+        min-width: 130px;
+    }
+
+
+    .profile-heading h1 {
+        font-size: 24px;
+    }
+
+}

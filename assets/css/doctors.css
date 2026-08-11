@@ -1,0 +1,896 @@
+/* =========================================
+   HEALTHSYNC - PATIENT DOCTORS PAGE
+========================================= */
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+.page-header h1 {
+
+    margin: 0;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+}
+
+.page-header p {
+
+    margin-top: 8px;
+
+    color: #94a3b8;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================
+   DOCTOR GRID
+========================================= */
+
+.doctor-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+
+    width: 100%;
+
+}
+
+
+/* =========================================
+   DOCTOR CARD
+========================================= */
+
+.doctor-card {
+
+    background: #1e293b;
+
+    border: 1px solid #263449;
+
+    border-radius: 18px;
+
+    padding: 26px;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+}
+
+.doctor-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 15px 35px rgba(37, 99, 235, 0.20);
+
+}
+
+
+/* =========================================
+   DOCTOR IMAGE
+========================================= */
+
+.doctor-image-wrapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+}
+
+.doctor-image {
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid #2563eb;
+
+    background: #172033;
+
+}
+
+
+/* =========================================
+   DOCTOR NAME
+========================================= */
+
+.doctor-card h2 {
+
+    margin: 8px 0;
+
+    color: #f8fafc;
+
+    font-size: 22px;
+
+}
+
+
+/* =========================================
+   SPECIALIZATION
+========================================= */
+
+.doctor-card h4 {
+
+    margin: 8px 0 20px;
+
+    color: #60a5fa;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+.doctor-card h4 i {
+
+    margin-right: 6px;
+
+}
+
+
+/* =========================================
+   DOCTOR INFORMATION
+========================================= */
+
+.doctor-info {
+
+    text-align: left;
+
+    margin-top: 15px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #2b3950;
+
+}
+
+.doctor-info span {
+
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+
+}
+
+.doctor-info span i {
+
+    color: #60a5fa;
+
+    margin-right: 6px;
+
+}
+
+.doctor-info p {
+
+    margin: 0;
+
+    color: #e2e8f0;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   ABOUT DOCTOR
+========================================= */
+
+.doctor-about {
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    text-align: left;
+
+    margin-top: 18px;
+
+}
+
+
+/* =========================================
+   BUTTON AREA
+========================================= */
+
+.doctor-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.doctor-btn {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 11px 12px;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+
+}
+
+.doctor-btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.doctor-btn.secondary {
+
+    background: #172554;
+
+    color: #60a5fa;
+
+    border: 1px solid #2563eb;
+
+}
+
+.doctor-btn.secondary:hover {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   NO DOCTORS
+========================================= */
+
+.no-doctors {
+
+    grid-column: 1 / -1;
+
+    background: #1e293b;
+
+    border: 1px solid #263449;
+
+    border-radius: 18px;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+}
+
+.no-doctors i {
+
+    font-size: 50px;
+
+    color: #60a5fa;
+
+    margin-bottom: 20px;
+
+}
+
+.no-doctors h2 {
+
+    margin-bottom: 10px;
+
+}
+
+.no-doctors p {
+
+    color: #94a3b8;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .doctor-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .doctor-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .doctor-actions {
+
+        flex-direction: column;
+
+    }
+
+}
+
+
+
+/* =========================================
+   HEALTHSYNC HOMEPAGE - DOCTORS SECTION
+========================================= */
+
+.doctors-section {
+    padding: 120px 8%;
+    position: relative;
+}
+
+
+/* =========================================
+   SECTION LABEL
+========================================= */
+
+.doctors-section .section-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    background: rgba(59, 130, 246, 0.10);
+
+    border: 1px solid rgba(59, 130, 246, 0.20);
+
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   DOCTORS GRID
+========================================= */
+
+.doctors-section .doctors-grid {
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+
+/* =========================================
+   HOMEPAGE DOCTOR CARD
+========================================= */
+
+.doctor-home-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.09);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(16px);
+
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.20);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+
+.doctor-home-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(59,130,246,.55);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.30),
+        0 10px 30px rgba(37,99,235,.15);
+}
+
+
+/* =========================================
+   DOCTOR IMAGE
+========================================= */
+
+.doctor-home-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    background: #172033;
+}
+
+
+.doctor-home-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    transition:
+        transform .5s ease;
+}
+
+
+.doctor-home-card:hover
+.doctor-home-image img {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   AVAILABLE STATUS
+========================================= */
+
+.doctor-status {
+
+    position: absolute;
+
+    top: 16px;
+
+    right: 16px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(15,23,42,.85);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    color: #86efac;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    backdrop-filter: blur(8px);
+}
+
+
+.doctor-status i {
+
+    color: #22c55e;
+
+    font-size: 7px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.doctor-home-content {
+
+    padding: 27px;
+}
+
+
+/* =========================================
+   SPECIALIZATION
+========================================= */
+
+.doctor-specialty {
+
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    color: #60a5fa;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DOCTOR NAME
+========================================= */
+
+.doctor-home-content h3 {
+
+    margin: 0 0 12px;
+
+    color: #f8fafc;
+
+    font-size: 23px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.doctor-home-content p {
+
+    margin: 0;
+
+    min-height: 68px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   DOCTOR META
+========================================= */
+
+.doctor-meta {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+}
+
+
+.doctor-meta span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+.doctor-meta i {
+
+    color: #fbbf24;
+}
+
+
+.doctor-meta span:last-child i {
+
+    color: #60a5fa;
+}
+
+
+/* =========================================
+   VIEW PROFILE BUTTON
+========================================= */
+
+.doctor-view-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.doctor-view-btn i {
+
+    transition:
+        transform .3s ease;
+}
+
+
+.doctor-view-btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,.30);
+}
+
+
+.doctor-view-btn:hover i {
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================
+   VIEW ALL DOCTORS
+========================================= */
+
+.doctors-section-button {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+
+.view-all-doctors {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 25px;
+
+    border:
+        1px solid rgba(59,130,246,.45);
+
+    border-radius: 10px;
+
+    background:
+        rgba(59,130,246,.08);
+
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.view-all-doctors i {
+
+    transition:
+        transform .3s ease;
+}
+
+
+.view-all-doctors:hover {
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+.view-all-doctors:hover i {
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================
+   HOMEPAGE DOCTORS RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .doctors-section {
+
+        padding: 100px 6%;
+
+    }
+
+
+    .doctors-section .doctors-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .doctors-section {
+
+        padding: 80px 5%;
+
+    }
+
+
+    .doctors-section .doctors-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .doctor-home-image {
+
+        height: 280px;
+
+    }
+
+
+    .doctor-home-content {
+
+        padding: 23px;
+
+    }
+
+
+    .doctor-home-content h3 {
+
+        font-size: 21px;
+
+    }
+
+
+    .doctor-meta {
+
+        gap: 10px;
+
+    }
+
+}
